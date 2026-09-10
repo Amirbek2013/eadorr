@@ -1,62 +1,45 @@
-const header = document.querySelector('.site-header');
 const menuBtn = document.getElementById('menuBtn');
-const nav = document.getElementById('mainNav');
+const nav = document.getElementById('nav');
+const topBtn = document.getElementById('toTopBtn');
+const downloadBtn = document.getElementById('downloadBtn');
 const toast = document.getElementById('toast');
 
-function showToast(message){
-  toast.textContent = message;
-  toast.classList.add('show');
-  clearTimeout(window.__toastTimer);
-  window.__toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
-}
-
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 18);
-});
-
-menuBtn.addEventListener('click', () => {
+menuBtn?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   document.body.classList.toggle('menu-open', open);
   menuBtn.setAttribute('aria-expanded', String(open));
 });
 
-nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   nav.classList.remove('open');
   document.body.classList.remove('menu-open');
   menuBtn.setAttribute('aria-expanded', 'false');
 }));
 
-document.getElementById('toTopBtn').addEventListener('click', () => {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+topBtn?.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+
+downloadBtn?.addEventListener('click', () => {
+  toast.classList.add('show');
+  clearTimeout(window.__toastTimer);
+  window.__toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
 });
 
-document.getElementById('downloadBtn').addEventListener('click', () => {
-  showToast('Файл игры ещё не прикреплён — нужно вставить ссылку на актуальную сборку.');
-});
-
-document.getElementById('vkBtn').addEventListener('click', (e) => {
-  e.preventDefault();
-  showToast('Нужно вставить ссылку на VK-группу заказчика.');
-});
-
-document.querySelectorAll('.release-head').forEach(btn => {
+document.querySelectorAll('.release__head').forEach(btn => {
   btn.addEventListener('click', () => {
     const release = btn.closest('.release');
-    const isOpen = release.classList.toggle('open');
-    btn.setAttribute('aria-expanded', String(isOpen));
-    release.querySelector('.release-toggle').textContent = isOpen ? '−' : '+';
+    const open = release.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+    const icon = btn.querySelector('i');
+    if (icon) icon.textContent = open ? '−' : '+';
   });
 });
 
-const reveal = new IntersectionObserver(entries => {
+const sections = [...document.querySelectorAll('main section[id]')];
+const navLinks = [...document.querySelectorAll('.nav a')];
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    entry.target.animate(
-      [{opacity:0, transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],
-      {duration:560,easing:'cubic-bezier(.2,.7,.2,1)',fill:'both'}
-    );
-    reveal.unobserve(entry.target);
+    navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
   });
-},{threshold:.1});
-
-document.querySelectorAll('.download-card,.feature,.media-frame,.lobby-frame,.news-card,.news-mini,.release,.community-card').forEach(el => reveal.observe(el));
+}, {rootMargin:'-35% 0px -55% 0px'});
+sections.forEach(section => observer.observe(section));

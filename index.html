@@ -3,328 +3,211 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Eador: Adrageron — онлайн-пошаговая фэнтезийная стратегия, развиваемая вместе с сообществом. Скачать последнюю версию, узнать новости и историю обновлений.">
-  <meta name="theme-color" content="#0d0d0b">
-  <title>Eador: Adrageron — онлайн-стратегия, которая живёт вместе с игроками</title>
+  <meta name="description" content="Eador: Adrageron — онлайн-пошаговая фэнтезийная стратегия, развиваемая вместе с сообществом игроков.">
+  <meta name="theme-color" content="#180805">
+  <title>Eador: Adrageron — официальный хаб сообщества</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-noise" aria-hidden="true"></div>
+  <div class="page-texture" aria-hidden="true"></div>
 
-  <header class="site-header" id="top">
-    <div class="shell header-inner">
-      <a class="mini-brand" href="#top" aria-label="Eador Adrageron">
+  <header class="topbar" id="top">
+    <div class="topbar__edge"></div>
+    <div class="frame topbar__inner">
+      <a class="brand" href="#top" aria-label="Eador Adrageron">
         <img src="assets/eador-icon.png" alt="">
-        <span><b>EADOR</b><small>ADRAGERON</small></span>
+        <span><b>Eador</b><small>Adrageron</small></span>
       </a>
 
-      <nav class="main-nav" id="mainNav">
-        <a href="#about">Об игре</a>
+      <nav class="nav" id="nav">
+        <a class="active" href="#about">Об игре</a>
         <a href="#online">Онлайн</a>
         <a href="#life">Жизнь игры</a>
         <a href="#changelog">Обновления</a>
         <a href="#community">Сообщество</a>
       </nav>
 
-      <a class="header-download" href="#download">Скачать игру</a>
-
-      <button class="menu-btn" id="menuBtn" type="button" aria-label="Открыть меню" aria-expanded="false">
-        <i></i><i></i><i></i>
-      </button>
+      <a class="game-button game-button--small" href="#download"><span>Скачать игру</span></a>
+      <button class="menu" id="menuBtn" type="button" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i><i></i></button>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-vignette" aria-hidden="true"></div>
-
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <p class="overline">ОНЛАЙН-ПОШАГОВАЯ ФЭНТЕЗИЙНАЯ СТРАТЕГИЯ</p>
-
-          <div class="hero-title">
-            <span>EADOR</span>
-            <strong>ADRAGERON</strong>
+  <main class="site-shell">
+    <section class="hero game-window">
+      <div class="hero__map"></div>
+      <div class="hero__shade"></div>
+      <div class="hero__content frame">
+        <div class="hero__copy">
+          <span class="ribbon">ОНЛАЙН-ПОШАГОВАЯ СТРАТЕГИЯ</span>
+          <h1>Eador: <em>Adrageron</em></h1>
+          <p class="hero__lead">Мир, который снова живёт — теперь вместе с игроками.</p>
+          <p class="hero__text">Развивайте владения, собирайте армии, исследуйте осколки и сражайтесь с живыми соперниками. Проект меняется вместе с сообществом.</p>
+          <div class="hero__actions">
+            <a class="game-button" href="#download"><span>↓ Скачать последнюю версию</span></a>
+            <a class="game-button game-button--dark" href="#about"><span>О проекте</span></a>
           </div>
-
-          <h1>Мир Eador снова живёт.<br><em>Теперь — вместе с игроками.</em></h1>
-
-          <p class="hero-lead">
-            Развивайте владения, ведите героев в бой и сражайтесь не только с ИИ,
-            но и с другими игроками. Проект развивается вместе с сообществом.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#download">
-              <span class="btn-icon">↓</span>
-              Скачать последнюю версию
-            </a>
-            <a class="btn btn-secondary" href="#about">Что изменилось?</a>
-          </div>
-
-          <div class="hero-meta">
-            <div><small>АКТУАЛЬНАЯ ВЕРСИЯ</small><strong>v1.0.63</strong></div>
-            <div><small>РЕЖИМ</small><strong>Онлайн + PvE</strong></div>
-            <div><small>СТАТУС</small><strong class="status"><i></i> Разработка идёт</strong></div>
+          <div class="status-strip">
+            <div><small>Версия</small><b>1.0.63</b></div>
+            <div><small>Режим</small><b>Online + PvE</b></div>
+            <div><small>Статус</small><b class="live"><i></i> Идёт разработка</b></div>
           </div>
         </div>
 
-        <div class="wheel-wrap" aria-hidden="true">
-          <div class="wheel">
-            <div class="wheel-ring ring-a"></div>
-            <div class="wheel-ring ring-b"></div>
-            <div class="wheel-card">
-              <img src="assets/adrageron-logo.png" alt="">
-            </div>
-            <span class="wheel-label wheel-label-1">СТРАТЕГИЯ</span>
-            <span class="wheel-label wheel-label-2">ОНЛАЙН</span>
-            <span class="wheel-label wheel-label-3">RPG</span>
-            <span class="wheel-label wheel-label-4">СООБЩЕСТВО</span>
+        <aside class="hero__sigil" aria-label="Эмблема Eador Adrageron">
+          <div class="sigil-frame">
+            <img src="assets/adrageron-logo.png" alt="Eador Adrageron">
           </div>
-        </div>
+        </aside>
       </div>
-
-      <a class="hero-scroll" href="#download">ДАЛЬШЕ <span>↓</span></a>
+      <div class="corner corner--tl"></div><div class="corner corner--tr"></div><div class="corner corner--bl"></div><div class="corner corner--br"></div>
     </section>
 
-    <section class="download-section" id="download">
-      <div class="shell">
-        <div class="download-card">
-          <div class="download-ornament" aria-hidden="true">E</div>
+    <section class="quickbar frame" aria-label="Ключевые особенности">
+      <a href="#online" class="medallion-link"><span class="medallion">⚔</span><b>Сетевые битвы</b><small>Против живых игроков</small></a>
+      <a href="#life" class="medallion-link"><span class="medallion">✦</span><b>Живой проект</b><small>Новости и обновления</small></a>
+      <a href="#community" class="medallion-link"><span class="medallion">☷</span><b>Сообщество</b><small>Идеи влияют на игру</small></a>
+      <a href="#changelog" class="medallion-link"><span class="medallion">↻</span><b>Changelog</b><small>История версий</small></a>
+    </section>
 
-          <div class="download-copy">
-            <p class="overline">ПОСЛЕДНЯЯ СБОРКА</p>
-            <h2>Eador: Adrageron <span>v1.0.63</span></h2>
-            <p>
-              Актуальная версия онлайн-клиента. После публикации новой сборки здесь
-              автоматически меняются версия, дата и ссылка.
-            </p>
-
-            <div class="release-facts">
+    <section class="section parchment-section" id="download">
+      <div class="frame">
+        <div class="section-title"><span>Последняя сборка</span></div>
+        <div class="download-panel parchment">
+          <div class="download-panel__icon"><img src="assets/eador-icon.png" alt=""></div>
+          <div class="download-panel__copy">
+            <span class="ink-label">АКТУАЛЬНАЯ ВЕРСИЯ</span>
+            <h2>Eador: Adrageron <b>v1.0.63</b></h2>
+            <p>Последняя сборка онлайн-клиента. После публикации новой версии здесь меняются номер, дата, описание и ссылка на файл.</p>
+            <div class="release-info">
               <span><small>Дата релиза</small><b>будет указана</b></span>
-              <span><small>Размер</small><b>≈ 100 МБ</b></span>
               <span><small>Платформа</small><b>Windows</b></span>
+              <span><small>Размер</small><b>≈ 100 МБ</b></span>
             </div>
           </div>
-
-          <div class="download-action">
-            <button class="btn btn-primary btn-big" id="downloadBtn" type="button">
-              <span class="btn-icon">↓</span>
-              Скачать игру
-            </button>
-            <small>Ссылка на файл будет добавлена заказчиком</small>
+          <div class="download-panel__action">
+            <button class="game-button game-button--red" id="downloadBtn" type="button"><span>↓ Скачать игру</span></button>
+            <small>Ссылка будет добавлена владельцем проекта</small>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section about" id="about">
-      <div class="shell split-layout">
-        <div class="copy-block">
-          <p class="overline">НЕ АРХИВ. ЖИВОЙ ПРОЕКТ.</p>
-          <h2>Игру делаем<br><em>вместе с вами</em></h2>
-          <p>
-            Adrageron продолжает идеи Eador: Genesis, но развивается как живой онлайн-проект.
-            Отзывы, предложения и обсуждения игроков помогают определять, что появится дальше.
-          </p>
-          <p>
-            Здесь важна не только одиночная кампания: сетевой режим позволяет проверять
-            стратегии против живых соперников и по-новому раскрывает знакомые механики.
-          </p>
+    <section class="section dark-panel" id="about">
+      <div class="frame">
+        <div class="section-title section-title--dark"><span>Об игре</span></div>
+        <div class="two-columns">
+          <article class="ornate-card">
+            <span class="cap">НЕ АРХИВ. ЖИВОЙ ПРОЕКТ.</span>
+            <h2>Игру создают<br><em>вместе с игроками</em></h2>
+            <p>Adrageron продолжает идеи Eador: Genesis, но развивается как самостоятельный живой онлайн-проект. Отзывы и предложения сообщества становятся частью разработки.</p>
+            <p>Здесь важна не только одиночная игра: сетевой режим позволяет проверить знакомые механики против соперника, который действительно думает.</p>
+            <blockquote>«Сообщество — не просто аудитория. Оно участвует в развитии мира.»</blockquote>
+          </article>
 
-          <div class="quote-card">
-            <span>“</span>
-            <p>Сообщество — не аудитория проекта. Оно часть разработки.</p>
-          </div>
+          <figure class="game-shot">
+            <div class="game-shot__label">ИГРОВОЙ МИР</div>
+            <img src="assets/game-map-2.png" alt="Скриншот Eador Adrageron">
+            <figcaption>Классическая 2D-эстетика, подробная карта и узнаваемая интерфейсная плотность.</figcaption>
+          </figure>
         </div>
-
-        <figure class="media-frame media-frame-game">
-          <img src="assets/game-map-2.png" alt="Скриншот игрового мира Eador">
-          <figcaption>
-            <span>ИГРОВОЙ МИР</span>
-            <b>Классическая 2D-эстетика и насыщенная стратегическая карта</b>
-          </figcaption>
-        </figure>
       </div>
     </section>
 
-    <section class="section online" id="online">
-      <div class="shell">
-        <div class="section-heading centered">
-          <p class="overline">СЕТЕВОЙ РЕЖИМ</p>
+    <section class="section stone-section" id="online">
+      <div class="frame">
+        <div class="section-title"><span>Сетевой режим</span></div>
+        <div class="section-intro">
+          <span class="cap">ОНЛАЙН — ОДНА ИЗ ГЛАВНЫХ ОСОБЕННОСТЕЙ</span>
           <h2>Не только против мира.<br><em>Против живого игрока.</em></h2>
-          <p>Онлайн-составляющая становится одной из главных особенностей Adrageron.</p>
         </div>
 
-        <div class="online-grid">
-          <article class="feature">
-            <span class="feature-num">01</span>
-            <div class="round-icon">⚔</div>
-            <h3>Сражения игроков</h3>
-            <p>Проверяйте свои решения и тактики там, где противник умеет удивлять.</p>
-          </article>
-          <article class="feature">
-            <span class="feature-num">02</span>
-            <div class="round-icon">◉</div>
-            <h3>Живой мир</h3>
-            <p>Проект получает обновления, новый контент и изменения баланса.</p>
-          </article>
-          <article class="feature">
-            <span class="feature-num">03</span>
-            <div class="round-icon">✦</div>
-            <h3>Влияние сообщества</h3>
-            <p>Предложения игроков и обсуждения помогают направлять разработку.</p>
-          </article>
+        <div class="feature-panels">
+          <article><span class="round-glyph">⚔</span><h3>Сражения игроков</h3><p>Тактики проверяются не скриптом, а настоящим соперником.</p></article>
+          <article><span class="round-glyph">♜</span><h3>Стратегическая глубина</h3><p>Армии, экономика, развитие героев и контроль территории.</p></article>
+          <article><span class="round-glyph">✦</span><h3>Развитие с фанатами</h3><p>Предложения и обсуждения помогают выбирать следующий шаг.</p></article>
         </div>
 
-        <figure class="lobby-frame">
-          <img src="assets/lobby.png" alt="Лобби Eador">
-          <figcaption>
-            <span>ТЕКУЩИЙ ВИД ЛОББИ</span>
-            <p>После сайта визуальный язык можно продолжить и в интерфейсе лобби.</p>
-          </figcaption>
+        <figure class="lobby-shot">
+          <div class="lobby-shot__top"><span>Текущий интерфейс лобби</span><small>визуальный язык сайта можно продолжить в лобби</small></div>
+          <img src="assets/lobby.png" alt="Лобби Eador Adrageron">
         </figure>
       </div>
     </section>
 
-    <section class="section life" id="life">
-      <div class="shell">
-        <div class="section-heading row-heading">
-          <div>
-            <p class="overline">ЖИЗНЬ ИГРЫ</p>
-            <h2>Последние новости</h2>
-          </div>
-          <a class="text-link" href="#community">Все новости в VK <span>↗</span></a>
+    <section class="section parchment-section" id="life">
+      <div class="frame">
+        <div class="section-title"><span>Жизнь игры</span></div>
+        <div class="news-heading">
+          <div><span class="ink-label">ПОСЛЕДНИЕ СОБЫТИЯ</span><h2>Новости проекта</h2></div>
+          <a href="#community">Все новости в VK →</a>
         </div>
 
-        <div class="news-grid">
-          <article class="news-card news-main">
-            <div class="news-image">
-              <img src="assets/game-map-1.png" alt="Игровая карта Eador">
-            </div>
-            <div class="news-body">
-              <span class="tag">РАЗРАБОТКА</span>
-              <time>Новый анонс</time>
-              <h3>Работа над онлайн-версией продолжается</h3>
-              <p>Здесь можно выводить свежий пост из VK или обновлять новость вручную через админ-панель.</p>
-              <a href="#community">Читать подробнее →</a>
-            </div>
+        <div class="news-board">
+          <article class="news-card news-card--main parchment">
+            <div class="news-card__image"><img src="assets/game-map-1.png" alt="Игровая карта"></div>
+            <div class="news-card__body"><span class="paper-tag">РАЗРАБОТКА</span><small>Новый анонс</small><h3>Работа над онлайн-версией продолжается</h3><p>Сюда можно автоматически выводить свежий пост из VK или обновлять новость вручную через админ-панель.</p><a href="#community">Читать →</a></div>
           </article>
+          <div class="news-stack">
+            <article class="paper-note"><span class="paper-tag">БАЛАНС</span><small>Обновление</small><h3>Изменения войск и экономики</h3><p>Короткое описание свежих изменений.</p></article>
+            <article class="paper-note"><span class="paper-tag">СООБЩЕСТВО</span><small>Обсуждение</small><h3>Что появится следующим?</h3><p>Идеи игроков можно собирать прямо через VK.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="news-side">
-            <article class="news-mini">
-              <span class="tag">БАЛАНС</span>
-              <time>Обновление</time>
-              <h3>Изменения войск и экономики</h3>
-              <p>Короткое описание одного из последних изменений проекта.</p>
+    <section class="section dark-panel" id="changelog">
+      <div class="frame">
+        <div class="section-title section-title--dark"><span>История обновлений</span></div>
+        <div class="changelog-grid">
+          <div class="changelog-copy">
+            <span class="cap">ИГРА НЕ СТОИТ НА МЕСТЕ</span>
+            <h2>Каждая версия —<br><em>новый ход</em></h2>
+            <p>Игрок сразу видит, что изменилось: исправления, баланс, новые функции и контент.</p>
+          </div>
+          <div class="scroll-list">
+            <article class="release open">
+              <button class="release__head" type="button" aria-expanded="true"><span class="seal">E</span><span><small>АКТУАЛЬНАЯ</small><b>Версия 1.0.63</b></span><time>Текущая сборка</time><i>−</i></button>
+              <div class="release__body"><ul><li>Место для изменений последней версии.</li><li>Исправления ошибок и стабильности.</li><li>Баланс и развитие сетевого режима.</li></ul></div>
             </article>
-            <article class="news-mini">
-              <span class="tag">СООБЩЕСТВО</span>
-              <time>Обсуждение</time>
-              <h3>Каким будет следующий этап?</h3>
-              <p>Вопросы, идеи и предложения игроков можно собирать через VK.</p>
+            <article class="release">
+              <button class="release__head" type="button" aria-expanded="false"><span class="seal">E</span><span><small>ПРЕДЫДУЩАЯ</small><b>Версия 1.0.62</b></span><time>История</time><i>+</i></button>
+              <div class="release__body"><ul><li>Место для предыдущего changelog.</li><li>Изменения интерфейса и игровых механик.</li></ul></div>
+            </article>
+            <article class="release">
+              <button class="release__head" type="button" aria-expanded="false"><span class="seal">E</span><span><small>АРХИВ</small><b>Более ранние версии</b></span><time>Архив</time><i>+</i></button>
+              <div class="release__body"><p>Здесь можно хранить полный список старых обновлений.</p></div>
             </article>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section changelog" id="changelog">
-      <div class="shell changelog-layout">
-        <div class="section-heading changelog-title">
-          <p class="overline">ИСТОРИЯ ОБНОВЛЕНИЙ</p>
-          <h2>Игра не стоит<br><em>на месте</em></h2>
-          <p>
-            От новых функций до исправлений баланса — здесь игрок сразу видит,
-            что изменилось в каждой версии.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <article class="release open">
-            <button class="release-head" type="button" aria-expanded="true">
-              <span class="release-dot"></span>
-              <span>
-                <small>АКТУАЛЬНАЯ</small>
-                <strong>Версия 1.0.63</strong>
-              </span>
-              <time>Текущая сборка</time>
-              <b class="release-toggle">−</b>
-            </button>
-            <div class="release-body">
-              <ul>
-                <li>Место для описания изменений последней версии.</li>
-                <li>Исправления ошибок и улучшения стабильности.</li>
-                <li>Баланс, новый контент и изменения сетевого режима.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="release">
-            <button class="release-head" type="button" aria-expanded="false">
-              <span class="release-dot"></span>
-              <span><small>ПРЕДЫДУЩАЯ</small><strong>Версия 1.0.62</strong></span>
-              <time>Архив</time>
-              <b class="release-toggle">+</b>
-            </button>
-            <div class="release-body">
-              <ul>
-                <li>Пример старого списка изменений.</li>
-                <li>Этот контент затем заполняется реальными changelog-записями.</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="release">
-            <button class="release-head" type="button" aria-expanded="false">
-              <span class="release-dot"></span>
-              <span><small>АРХИВ</small><strong>Версия 1.0.61</strong></span>
-              <time>Архив</time>
-              <b class="release-toggle">+</b>
-            </button>
-            <div class="release-body">
-              <ul>
-                <li>История обновлений хранится от новой версии к старой.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section community" id="community">
-      <div class="shell community-card">
-        <div class="community-art">
-          <img src="assets/adrageron-logo.png" alt="">
-        </div>
+    <section class="section community-section" id="community">
+      <div class="frame community-grid">
         <div class="community-copy">
-          <p class="overline">МЕСТО, ГДЕ РОЖДАЕТСЯ ИГРА</p>
+          <span class="ribbon">МЕСТО, ГДЕ РОЖДАЕТСЯ ИГРА</span>
           <h2>Присоединяйтесь<br>к сообществу</h2>
-          <p>
-            Новости, обсуждения, скриншоты, идеи и обратная связь — всё это можно собрать
-            вокруг VK-группы и связать с сайтом.
-          </p>
-          <a class="btn btn-secondary" href="#" id="vkBtn">Открыть VK-группу ↗</a>
-          <small class="placeholder-note">Ссылка будет вставлена после получения от заказчика</small>
+          <p>Новости разработки, скриншоты, обсуждения и обратная связь с командой — всё в одном месте.</p>
+          <a class="game-button" href="#"><span>Перейти в VK ↗</span></a>
+        </div>
+        <div class="community-wheel" aria-hidden="true">
+          <div class="community-wheel__ring"></div>
+          <img src="assets/eador-icon.png" alt="">
+          <span class="cw cw1">НОВОСТИ</span><span class="cw cw2">ИДЕИ</span><span class="cw cw3">ИГРОКИ</span><span class="cw cw4">ОБНОВЛЕНИЯ</span>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="shell footer-inner">
-      <a class="mini-brand footer-brand" href="#top">
-        <img src="assets/eador-icon.png" alt="">
-        <span><b>EADOR</b><small>ADRAGERON</small></span>
-      </a>
-      <p>Онлайн-проект по мотивам Eador. Концепт сайта.</p>
+    <div class="frame footer__inner">
+      <a class="brand brand--footer" href="#top"><img src="assets/eador-icon.png" alt=""><span><b>Eador</b><small>Adrageron</small></span></a>
+      <p>© 2026 Eador: Adrageron</p>
       <button class="to-top" id="toTopBtn" type="button" aria-label="Наверх">↑</button>
     </div>
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
+  <div class="toast" id="toast" role="status">Ссылка на актуальную сборку будет добавлена владельцем проекта.</div>
   <script src="script.js"></script>
 </body>
 </html>
